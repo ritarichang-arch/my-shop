@@ -1,7 +1,4 @@
-const UPSTREAM_ENTRY_URL = "https://swipeshop-delta.vercel.app/pabili.html";
 const UPSTREAM_SHOP_URL = "https://swipeshop-delta.vercel.app/";
-const LIVE_ROOM_URL = "https://www.tiktok.com/@pabilicloset.tw";
-const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61566271738744";
 
 let products = [
   {
@@ -173,24 +170,18 @@ const I18N = {
   en: {
     code: "EN",
     htmlLang: "en",
-    brandSub: "Post-live second-hand shop",
+    brandSub: "Curated second-hand market",
     navStock: "Stock",
-    navLive: "Live",
-    navPartner: "Source",
+    navMarket: "Market",
     cart: "Cart",
-    heroTitle: "Good clothes from the live that deserve a second look.",
+    heroTitle: "Good clothes deserve to meet their next person.",
     heroBody:
-      "A downstream shop for post-live second-hand clothing: list quickly, show size and condition clearly, let customers choose, add to cart, then move to checkout.",
+      "A curated second-hand clothing market with clear sizes, prices, and condition notes. Customers can browse, add favorites to cart, and prepare an inquiry list.",
     startShopping: "Start shopping",
-    liveLink: "Open live room",
-    newDrop: "New drop",
+    newDrop: "In stock",
     averagePrice: "Avg. price",
-    unsoldLive: "Post-live stock",
-    sourceShop: "Source shop",
-    sourceName: "Pabili Closet",
-    partnerBody: "Link to the live room, original product page, LINE group, TikTok, Facebook, or Instagram so customers can see the source and latest sessions.",
-    visitSource: "Visit source shop",
-    facebook: "Facebook",
+    marketPosition: "Market",
+    marketValue: "Pre-loved",
     filters: "Filters",
     reset: "Reset",
     searchProducts: "Search products",
@@ -207,13 +198,13 @@ const I18N = {
     catalogTitle: "Post-live stock",
     items: "items",
     item: "item",
-    syncing: "Syncing source products...",
-    synced: "Synced Pabili Closet",
+    syncing: "Syncing product inventory...",
+    synced: "Inventory synced",
     updated: "updated",
     fallback: "Using built-in products for now; this page will try syncing again next time.",
     noMatchTitle: "No matching clothes",
     noMatchBody: "Try a different size, category, or budget.",
-    liveUnsold: "Post-live",
+    liveUnsold: "Pre-loved",
     add: "Add",
     emptyCartTitle: "Your cart is empty",
     emptyCartBody: "Add clothes you like, then send the checkout inquiry together.",
@@ -229,7 +220,6 @@ const I18N = {
     detailCondition: "Condition",
     detailPrice: "Price",
     addCart: "Add to cart",
-    viewSource: "View source item",
     closeCart: "Close cart",
     closeDetail: "Close product details",
     openCart: "Open cart",
@@ -238,23 +228,17 @@ const I18N = {
   zh: {
     code: "中",
     htmlLang: "zh-Hant",
-    brandSub: "直播後二手衣賣場",
+    brandSub: "精選二手衣市場",
     navStock: "現貨",
-    navLive: "直播場",
-    navPartner: "上游連結",
+    navMarket: "市場資訊",
     cart: "購物車",
-    heroTitle: "直播沒被帶走的好衣服，在這裡重新被看見。",
-    heroBody: "適合做下游賣場的二手衣介面：直播後快速上架、清楚標示尺寸狀態，客人可以直接挑選、加入購物車，再導到你的結帳流程。",
+    heroTitle: "好的衣服值得被下一個妳遇見。",
+    heroBody: "精選二手衣市場：清楚標示尺寸、價格與衣況，客人可以直接挑選、加入購物車，再整理成詢問清單。",
     startShopping: "開始挑衣",
-    liveLink: "查看上游直播場",
-    newDrop: "本週新上架",
+    newDrop: "現貨商品",
     averagePrice: "平均單價",
-    unsoldLive: "直播未售出",
-    sourceShop: "上游商店",
-    sourceName: "家人直播衣櫥",
-    partnerBody: "可放直播連結、原商品頁、LINE 社群、TikTok、Facebook 或 Instagram，讓客人知道貨源與最新場次。",
-    visitSource: "前往上游商店",
-    facebook: "Facebook",
+    marketPosition: "市場定位",
+    marketValue: "Pre-loved",
     filters: "篩選",
     reset: "重設",
     searchProducts: "搜尋商品",
@@ -268,16 +252,16 @@ const I18N = {
     size: "尺寸",
     maxBudget: "最高預算",
     ready: "READY TO SHIP",
-    catalogTitle: "直播後現貨",
+    catalogTitle: "精選現貨",
     items: "件商品",
     item: "件商品",
-    syncing: "正在連線同步上游商品...",
-    synced: "已同步 Pabili Closet",
+    syncing: "正在同步商品庫存...",
+    synced: "商品庫存已同步",
     updated: "更新時間",
-    fallback: "目前使用內建商品資料；重新開啟頁面時會再嘗試同步上游。",
+    fallback: "目前使用內建商品資料；重新開啟頁面時會再嘗試同步。",
     noMatchTitle: "沒有符合條件的衣服",
     noMatchBody: "可以放寬尺寸、分類或預算。",
-    liveUnsold: "直播未售出",
+    liveUnsold: "二手精選",
     add: "加入",
     emptyCartTitle: "購物車是空的",
     emptyCartBody: "先把喜歡的二手衣加進來，再一起詢問結帳。",
@@ -293,267 +277,181 @@ const I18N = {
     detailCondition: "狀態",
     detailPrice: "售價",
     addCart: "加入購物車",
-    viewSource: "到上游看原商品",
     closeCart: "關閉購物車",
     closeDetail: "關閉商品細節",
     openCart: "開啟購物車",
     viewProduct: "查看"
   },
-  fil: {
-    code: "FIL",
-    htmlLang: "fil",
-    brandSub: "Pre-loved shop pagkatapos ng live",
-    navStock: "Stocks",
-    navLive: "Live",
-    navPartner: "Source",
-    cart: "Cart",
-    heroTitle: "Mga damit na hindi na-mine sa live, ready na ulit makita.",
-    heroBody: "Shop para sa post-live pre-loved clothes: mabilis i-list, malinaw ang size at condition, tapos madaling idagdag sa cart.",
-    startShopping: "Mamili na",
-    liveLink: "Buksan ang live",
-    newDrop: "New drop",
-    averagePrice: "Average price",
-    unsoldLive: "Post-live stock",
-    sourceShop: "Source shop",
-    sourceName: "Pabili Closet",
-    partnerBody: "Puwedeng ilagay ang live link, original item page, LINE, TikTok, Facebook, o Instagram para makita ng customers ang source.",
-    visitSource: "Punta sa source",
-    facebook: "Facebook",
-    filters: "Filter",
-    reset: "Reset",
-    searchProducts: "Search item",
-    searchPlaceholder: "Dress, top, denim...",
-    category: "Category",
-    all: "All",
-    tops: "Tops",
-    jackets: "Jackets",
-    dresses: "Dresses",
-    bottoms: "Bottoms",
-    size: "Size",
-    maxBudget: "Max budget",
+  ja: {
+    code: "日",
+    htmlLang: "ja",
+    brandSub: "セレクト古着マーケット",
+    navStock: "在庫",
+    navMarket: "マーケット",
+    cart: "カート",
+    heroTitle: "良い服は、次の持ち主と出会う価値がある。",
+    heroBody: "サイズ、価格、状態が見やすい古着マーケット。気になる商品を選んでカートに入れ、問い合わせリストを作れます。",
+    startShopping: "商品を見る",
+    newDrop: "在庫商品",
+    averagePrice: "平均価格",
+    marketPosition: "マーケット",
+    marketValue: "Pre-loved",
+    filters: "絞り込み",
+    reset: "リセット",
+    searchProducts: "商品検索",
+    searchPlaceholder: "ワンピース、トップス、デニム...",
+    category: "カテゴリー",
+    all: "すべて",
+    tops: "トップス",
+    jackets: "アウター",
+    dresses: "ワンピース",
+    bottoms: "ボトムス",
+    size: "サイズ",
+    maxBudget: "予算上限",
     ready: "READY TO SHIP",
-    catalogTitle: "Post-live stocks",
-    items: "items",
-    item: "item",
-    syncing: "Syncing source items...",
-    synced: "Synced Pabili Closet",
-    updated: "updated",
-    fallback: "Built-in items muna; susubukan ulit mag-sync sa next open.",
-    noMatchTitle: "Walang match",
-    noMatchBody: "Try ibang size, category, o budget.",
-    liveUnsold: "Post-live",
-    add: "Add",
-    emptyCartTitle: "Empty pa ang cart",
-    emptyCartBody: "Add mo muna ang gusto mong damit, then ask checkout together.",
-    notSelected: "Wala pang item",
-    subtotal: "Subtotal",
-    checkout: "Ask checkout",
-    remove: "Remove",
-    added: "added to cart",
-    addFirst: "Add item muna",
-    inquiryReady: "Ready na ang inquiry list",
-    detailCategory: "Category",
-    detailSize: "Size",
-    detailCondition: "Condition",
-    detailPrice: "Price",
-    addCart: "Add to cart",
-    viewSource: "View source item",
-    closeCart: "Close cart",
-    closeDetail: "Close details",
-    openCart: "Open cart",
-    viewProduct: "View"
+    catalogTitle: "セレクト在庫",
+    items: "点",
+    item: "点",
+    syncing: "商品在庫を同期中...",
+    synced: "商品在庫を同期しました",
+    updated: "更新",
+    fallback: "現在は内蔵商品データを表示しています。次回表示時に再同期します。",
+    noMatchTitle: "該当する商品がありません",
+    noMatchBody: "サイズ、カテゴリー、予算を変更してみてください。",
+    liveUnsold: "古着セレクト",
+    add: "追加",
+    emptyCartTitle: "カートは空です",
+    emptyCartBody: "気になる服を追加して、まとめて問い合わせできます。",
+    notSelected: "商品はまだありません",
+    subtotal: "小計",
+    checkout: "問い合わせ",
+    remove: "削除",
+    added: "をカートに追加しました",
+    addFirst: "先に商品を追加してください",
+    inquiryReady: "問い合わせリストができました",
+    detailCategory: "カテゴリー",
+    detailSize: "サイズ",
+    detailCondition: "状態",
+    detailPrice: "価格",
+    addCart: "カートに追加",
+    closeCart: "カートを閉じる",
+    closeDetail: "商品詳細を閉じる",
+    openCart: "カートを開く",
+    viewProduct: "見る"
   },
-  id: {
-    code: "ID",
-    htmlLang: "id",
-    brandSub: "Toko baju bekas setelah live",
-    navStock: "Stok",
-    navLive: "Live",
-    navPartner: "Sumber",
-    cart: "Keranjang",
-    heroTitle: "Baju bagus dari live, siap dilihat lagi.",
-    heroBody: "Toko lanjutan untuk baju pre-loved setelah live: cepat upload, jelas ukuran dan kondisi, pelanggan bisa pilih lalu masukkan keranjang.",
-    startShopping: "Mulai belanja",
-    liveLink: "Buka live",
-    newDrop: "Barang baru",
-    averagePrice: "Harga rata-rata",
-    unsoldLive: "Stok setelah live",
-    sourceShop: "Toko sumber",
-    sourceName: "Pabili Closet",
-    partnerBody: "Bisa pasang link live, halaman barang asli, LINE, TikTok, Facebook, atau Instagram agar pelanggan tahu sumbernya.",
-    visitSource: "Buka toko sumber",
-    facebook: "Facebook",
-    filters: "Filter",
-    reset: "Reset",
-    searchProducts: "Cari barang",
-    searchPlaceholder: "Dress, atasan, denim...",
-    category: "Kategori",
-    all: "Semua",
-    tops: "Atasan",
-    jackets: "Jaket",
-    dresses: "Dress",
-    bottoms: "Bawahan",
-    size: "Ukuran",
-    maxBudget: "Budget maks",
-    ready: "SIAP DIKIRIM",
-    catalogTitle: "Stok setelah live",
-    items: "barang",
-    item: "barang",
-    syncing: "Sinkron barang sumber...",
-    synced: "Tersinkron Pabili Closet",
-    updated: "diperbarui",
-    fallback: "Memakai data bawaan dulu; akan coba sinkron lagi saat dibuka.",
-    noMatchTitle: "Tidak ada yang cocok",
-    noMatchBody: "Coba ubah ukuran, kategori, atau budget.",
-    liveUnsold: "Post-live",
-    add: "Tambah",
-    emptyCartTitle: "Keranjang kosong",
-    emptyCartBody: "Tambahkan baju yang disukai, lalu tanyakan checkout bersama.",
-    notSelected: "Belum ada barang",
-    subtotal: "Subtotal",
-    checkout: "Tanya checkout",
-    remove: "Hapus",
-    added: "masuk keranjang",
-    addFirst: "Tambahkan barang dulu",
-    inquiryReady: "Daftar pertanyaan siap",
-    detailCategory: "Kategori",
-    detailSize: "Ukuran",
-    detailCondition: "Kondisi",
-    detailPrice: "Harga",
-    addCart: "Masukkan keranjang",
-    viewSource: "Lihat barang sumber",
-    closeCart: "Tutup keranjang",
-    closeDetail: "Tutup detail",
-    openCart: "Buka keranjang",
-    viewProduct: "Lihat"
+  ko: {
+    code: "KO",
+    htmlLang: "ko",
+    brandSub: "셀렉트 세컨핸드 마켓",
+    navStock: "재고",
+    navMarket: "마켓",
+    cart: "장바구니",
+    heroTitle: "좋은 옷은 다음 사람을 만날 가치가 있어요.",
+    heroBody: "사이즈, 가격, 상태를 보기 쉽게 정리한 세컨핸드 의류 마켓입니다. 원하는 상품을 담고 문의 목록을 만들 수 있어요.",
+    startShopping: "쇼핑 시작",
+    newDrop: "재고 상품",
+    averagePrice: "평균 가격",
+    marketPosition: "마켓",
+    marketValue: "Pre-loved",
+    filters: "필터",
+    reset: "초기화",
+    searchProducts: "상품 검색",
+    searchPlaceholder: "원피스, 상의, 데님...",
+    category: "카테고리",
+    all: "전체",
+    tops: "상의",
+    jackets: "아우터",
+    dresses: "원피스",
+    bottoms: "하의",
+    size: "사이즈",
+    maxBudget: "최대 예산",
+    ready: "READY TO SHIP",
+    catalogTitle: "셀렉트 재고",
+    items: "개",
+    item: "개",
+    syncing: "상품 재고 동기화 중...",
+    synced: "상품 재고 동기화 완료",
+    updated: "업데이트",
+    fallback: "현재 내장 상품 데이터를 사용 중입니다. 다음에 다시 동기화합니다.",
+    noMatchTitle: "조건에 맞는 상품이 없습니다",
+    noMatchBody: "사이즈, 카테고리 또는 예산을 바꿔보세요.",
+    liveUnsold: "세컨핸드",
+    add: "담기",
+    emptyCartTitle: "장바구니가 비어 있습니다",
+    emptyCartBody: "마음에 드는 옷을 담고 한 번에 문의하세요.",
+    notSelected: "아직 상품이 없습니다",
+    subtotal: "소계",
+    checkout: "문의하기",
+    remove: "삭제",
+    added: "장바구니에 담았습니다",
+    addFirst: "먼저 상품을 담아주세요",
+    inquiryReady: "문의 목록이 준비되었습니다",
+    detailCategory: "카테고리",
+    detailSize: "사이즈",
+    detailCondition: "상태",
+    detailPrice: "가격",
+    addCart: "장바구니 담기",
+    closeCart: "장바구니 닫기",
+    closeDetail: "상품 상세 닫기",
+    openCart: "장바구니 열기",
+    viewProduct: "보기"
   },
-  vi: {
-    code: "VI",
-    htmlLang: "vi",
-    brandSub: "Shop đồ second-hand sau livestream",
-    navStock: "Hàng có sẵn",
-    navLive: "Livestream",
-    navPartner: "Nguồn hàng",
-    cart: "Giỏ hàng",
-    heroTitle: "Những món chưa bán trong live, nay được xem lại dễ hơn.",
-    heroBody: "Giao diện shop cho đồ second-hand sau livestream: đăng nhanh, rõ size và tình trạng, khách chọn rồi thêm vào giỏ.",
-    startShopping: "Mua ngay",
-    liveLink: "Mở livestream",
-    newDrop: "Hàng mới",
-    averagePrice: "Giá trung bình",
-    unsoldLive: "Hàng sau live",
-    sourceShop: "Shop nguồn",
-    sourceName: "Pabili Closet",
-    partnerBody: "Có thể đặt link livestream, trang sản phẩm gốc, LINE, TikTok, Facebook hoặc Instagram để khách biết nguồn hàng.",
-    visitSource: "Đến shop nguồn",
-    facebook: "Facebook",
-    filters: "Bộ lọc",
-    reset: "Đặt lại",
-    searchProducts: "Tìm sản phẩm",
-    searchPlaceholder: "Váy, áo, denim...",
-    category: "Danh mục",
-    all: "Tất cả",
-    tops: "Áo",
-    jackets: "Áo khoác",
-    dresses: "Váy",
-    bottoms: "Quần/váy",
-    size: "Size",
-    maxBudget: "Ngân sách tối đa",
-    ready: "SẴN SÀNG GỬI",
-    catalogTitle: "Hàng sau livestream",
-    items: "món",
-    item: "món",
-    syncing: "Đang đồng bộ sản phẩm...",
-    synced: "Đã đồng bộ Pabili Closet",
-    updated: "cập nhật",
-    fallback: "Đang dùng dữ liệu có sẵn; lần mở sau sẽ thử đồng bộ lại.",
-    noMatchTitle: "Không có sản phẩm phù hợp",
-    noMatchBody: "Hãy thử đổi size, danh mục hoặc ngân sách.",
-    liveUnsold: "Sau live",
-    add: "Thêm",
-    emptyCartTitle: "Giỏ hàng trống",
-    emptyCartBody: "Thêm món bạn thích rồi hỏi thanh toán cùng lúc.",
-    notSelected: "Chưa có món",
-    subtotal: "Tạm tính",
-    checkout: "Hỏi thanh toán",
-    remove: "Xóa",
-    added: "đã thêm vào giỏ",
-    addFirst: "Vui lòng thêm sản phẩm trước",
-    inquiryReady: "Danh sách hỏi hàng đã sẵn sàng",
-    detailCategory: "Danh mục",
-    detailSize: "Size",
-    detailCondition: "Tình trạng",
-    detailPrice: "Giá",
-    addCart: "Thêm vào giỏ",
-    viewSource: "Xem sản phẩm nguồn",
-    closeCart: "Đóng giỏ hàng",
-    closeDetail: "Đóng chi tiết",
-    openCart: "Mở giỏ hàng",
-    viewProduct: "Xem"
-  },
-  hi: {
-    code: "HI",
-    htmlLang: "hi",
-    brandSub: "लाइव के बाद सेकंड-हैंड कपड़ों की दुकान",
-    navStock: "स्टॉक",
-    navLive: "लाइव",
-    navPartner: "स्रोत",
-    cart: "कार्ट",
-    heroTitle: "लाइव में न बिके अच्छे कपड़े, अब फिर से देखने के लिए तैयार।",
-    heroBody: "लाइव के बाद सेकंड-हैंड कपड़ों के लिए दुकान: जल्दी लिस्ट करें, साइज और कंडीशन साफ दिखाएं, ग्राहक चुनकर कार्ट में जोड़ सकते हैं।",
-    startShopping: "खरीदारी शुरू करें",
-    liveLink: "लाइव खोलें",
-    newDrop: "नया स्टॉक",
-    averagePrice: "औसत कीमत",
-    unsoldLive: "लाइव के बाद स्टॉक",
-    sourceShop: "स्रोत दुकान",
-    sourceName: "Pabili Closet",
-    partnerBody: "लाइव लिंक, मूल उत्पाद पेज, LINE, TikTok, Facebook या Instagram जोड़ें ताकि ग्राहक स्रोत देख सकें।",
-    visitSource: "स्रोत दुकान खोलें",
-    facebook: "Facebook",
-    filters: "फ़िल्टर",
-    reset: "रीसेट",
-    searchProducts: "सामान खोजें",
-    searchPlaceholder: "ड्रेस, टॉप, डेनिम...",
-    category: "श्रेणी",
-    all: "सभी",
-    tops: "टॉप",
-    jackets: "जैकेट",
-    dresses: "ड्रेस",
-    bottoms: "बॉटम",
-    size: "साइज",
-    maxBudget: "अधिकतम बजट",
-    ready: "भेजने के लिए तैयार",
-    catalogTitle: "लाइव के बाद स्टॉक",
-    items: "आइटम",
-    item: "आइटम",
-    syncing: "स्रोत सामान सिंक हो रहा है...",
-    synced: "Pabili Closet सिंक हुआ",
-    updated: "अपडेट",
-    fallback: "अभी बिल्ट-इन सामान दिख रहा है; अगली बार फिर सिंक होगा।",
-    noMatchTitle: "कोई मैच नहीं मिला",
-    noMatchBody: "साइज, श्रेणी या बजट बदलकर देखें।",
-    liveUnsold: "पोस्ट-लाइव",
-    add: "जोड़ें",
-    emptyCartTitle: "कार्ट खाली है",
-    emptyCartBody: "पसंद के कपड़े जोड़ें, फिर चेकआउट पूछें।",
-    notSelected: "अभी कोई आइटम नहीं",
-    subtotal: "सबटोटल",
-    checkout: "चेकआउट पूछें",
-    remove: "हटाएं",
-    added: "कार्ट में जोड़ा गया",
-    addFirst: "पहले कोई आइटम जोड़ें",
-    inquiryReady: "पूछताछ सूची तैयार है",
-    detailCategory: "श्रेणी",
-    detailSize: "साइज",
-    detailCondition: "कंडीशन",
-    detailPrice: "कीमत",
-    addCart: "कार्ट में जोड़ें",
-    viewSource: "स्रोत आइटम देखें",
-    closeCart: "कार्ट बंद करें",
-    closeDetail: "विवरण बंद करें",
-    openCart: "कार्ट खोलें",
-    viewProduct: "देखें"
+  hk: {
+    code: "港",
+    htmlLang: "zh-HK",
+    brandSub: "精選二手衫市場",
+    navStock: "現貨",
+    navMarket: "市場資訊",
+    cart: "購物車",
+    heroTitle: "好嘅衫值得被下一個妳遇見。",
+    heroBody: "精選二手衫市場：清楚列明尺碼、價錢同衣況，客人可以直接揀衫、加入購物車，再整理成查詢清單。",
+    startShopping: "開始揀衫",
+    newDrop: "現貨商品",
+    averagePrice: "平均價",
+    marketPosition: "市場定位",
+    marketValue: "Pre-loved",
+    filters: "篩選",
+    reset: "重設",
+    searchProducts: "搜尋商品",
+    searchPlaceholder: "連身裙、上衣、牛仔...",
+    category: "分類",
+    all: "全部",
+    tops: "上衣",
+    jackets: "外套",
+    dresses: "連身裙",
+    bottoms: "褲裙",
+    size: "尺碼",
+    maxBudget: "最高預算",
+    ready: "READY TO SHIP",
+    catalogTitle: "精選現貨",
+    items: "件商品",
+    item: "件商品",
+    syncing: "正在同步商品庫存...",
+    synced: "商品庫存已同步",
+    updated: "更新時間",
+    fallback: "目前使用內置商品資料；重新開啟頁面時會再嘗試同步。",
+    noMatchTitle: "冇符合條件嘅衫",
+    noMatchBody: "可以放寬尺碼、分類或者預算。",
+    liveUnsold: "二手精選",
+    add: "加入",
+    emptyCartTitle: "購物車係空嘅",
+    emptyCartBody: "先將鍾意嘅二手衫加入，再一齊查詢結帳。",
+    notSelected: "未揀商品",
+    subtotal: "小計",
+    checkout: "查詢結帳",
+    remove: "移除",
+    added: "已加入購物車",
+    addFirst: "請先加入想買嘅商品",
+    inquiryReady: "已整理查詢清單",
+    detailCategory: "分類",
+    detailSize: "尺碼",
+    detailCondition: "衣況",
+    detailPrice: "售價",
+    addCart: "加入購物車",
+    closeCart: "關閉購物車",
+    closeDetail: "關閉商品詳情",
+    openCart: "開啟購物車",
+    viewProduct: "查看"
   }
 };
 
@@ -565,17 +463,44 @@ const categoryLabelKeys = {
   褲裙: "bottoms"
 };
 
+const productNameTranslations = {
+  zh: {
+    1: "復古森林花卉長洋裝",
+    2: "祖母綠塗鴉印花洋裝",
+    3: "經典牛仔中長裙",
+    4: "亮橘色寬管喇叭褲",
+    5: "Y2K 愛心針織背心",
+    6: "學院風菱格針織背心",
+    7: "卡布奇諾短袖帽T",
+    8: "灰色 Logo 短版細肩上衣"
+  },
+  hk: {
+    1: "復古森林花花長裙",
+    2: "祖母綠塗鴉印花裙",
+    3: "經典牛仔中長裙",
+    4: "鮮橙色闊腳喇叭褲",
+    5: "Y2K 愛心針織背心",
+    6: "學院風菱格針織背心",
+    7: "卡布奇諾短袖帽T",
+    8: "灰色 Logo 短版吊帶上衣"
+  }
+};
+
 function t(key) {
   return I18N[state.lang][key] || I18N.en[key] || key;
 }
 
 function itemWord(count) {
-  if (state.lang === "en" || state.lang === "fil") return count === 1 ? t("item") : t("items");
+  if (state.lang === "en") return count === 1 ? t("item") : t("items");
   return t("items");
 }
 
 function tCategory(category) {
   return t(categoryLabelKeys[category] || category);
+}
+
+function productName(product) {
+  return productNameTranslations[state.lang]?.[product.upstreamId || product.id] || product.name;
 }
 
 const formatter = new Intl.NumberFormat("zh-TW", {
@@ -662,7 +587,7 @@ async function syncUpstreamProducts() {
 
     const html = await response.text();
     const upstreamProducts = parseUpstreamProducts(html);
-    if (upstreamProducts.length === 0) throw new Error("上游頁面沒有找到商品資料");
+    if (upstreamProducts.length === 0) throw new Error("No product data found");
 
     products = upstreamProducts;
     renderProducts();
@@ -722,8 +647,7 @@ function applyLanguage() {
 
   setText(".brand small", t("brandSub"));
   setText(".nav-links a[href='#products']", t("navStock"));
-  setText(".nav-links a[href='#live']", t("navLive"));
-  setText(".nav-links a[href='#partner']", t("navPartner"));
+  setText(".nav-links a[href='#market']", t("navMarket"));
   setText("#cartToggle span", t("cart"));
   document.querySelector("#cartToggle").setAttribute("aria-label", t("openCart"));
 
@@ -731,18 +655,10 @@ function applyLanguage() {
   const heroBody = document.querySelector(".store-copy p:not(.eyebrow)");
   if (heroBody) heroBody.textContent = t("heroBody");
   setText(".primary-link[href='#products']", t("startShopping"));
-  setText("#liveLink", t("liveLink"));
-  document.querySelector("#liveLink").href = LIVE_ROOM_URL;
   setText(".drop-panel div:nth-child(1) .panel-label", t("newDrop"));
   setText(".drop-panel div:nth-child(2) .panel-label", t("averagePrice"));
-  setText(".drop-panel div:nth-child(3) .panel-label", t("unsoldLive"));
-  setText(".partner-strip span", t("sourceShop"));
-  setText(".partner-strip strong", t("sourceName"));
-  setText(".partner-strip p", t("partnerBody"));
-  setText("#sourceShopLink", t("visitSource"));
-  setText("#facebookLink", t("facebook"));
-  document.querySelector("#sourceShopLink").href = UPSTREAM_ENTRY_URL;
-  document.querySelector("#facebookLink").href = FACEBOOK_URL;
+  setText(".drop-panel div:nth-child(3) .panel-label", t("marketPosition"));
+  setText(".drop-panel div:nth-child(3) strong", t("marketValue"));
 
   setText(".filter-heading span", t("filters"));
   setText("#resetFilters", t("reset"));
@@ -772,7 +688,7 @@ function applyLanguage() {
 
 function filteredProducts() {
   return products.filter((product) => {
-    const matchesSearch = `${product.name}${product.category}${tCategory(product.category)}${product.source}`
+    const matchesSearch = `${product.name}${productName(product)}${product.category}${tCategory(product.category)}${product.source}`
       .toLowerCase()
       .includes(state.search.toLowerCase());
     const matchesCategory = state.category === "全部" || product.category === state.category;
@@ -805,8 +721,8 @@ function renderProducts() {
     .map(
       (product) => `
         <article class="product-card">
-          <button class="product-image" data-detail="${product.id}" type="button" aria-label="${t("viewProduct")} ${product.name}">
-            <img src="${product.image}" alt="${product.name}" loading="lazy" />
+          <button class="product-image" data-detail="${product.id}" type="button" aria-label="${t("viewProduct")} ${productName(product)}">
+            <img src="${product.image}" alt="${productName(product)}" loading="lazy" />
             <span class="badge-row">
               <span class="badge live">${t("liveUnsold")}</span>
               <span class="badge">${product.condition}</span>
@@ -817,7 +733,7 @@ function renderProducts() {
               <span>${tCategory(product.category)} / ${product.size}</span>
               <span>${product.source}</span>
             </div>
-            <h3>${product.name}</h3>
+            <h3>${productName(product)}</h3>
             <div class="price-row">
               <strong>${money(product.price)}</strong>
               <button data-add="${product.id}" type="button">${t("add")}</button>
@@ -849,9 +765,9 @@ function renderCart() {
     .map(
       (item) => `
         <div class="cart-item">
-          <img src="${item.image}" alt="${item.name}" />
+          <img src="${item.image}" alt="${productName(item)}" />
           <div>
-            <h4>${item.name}</h4>
+            <h4>${productName(item)}</h4>
             <p>${tCategory(item.category)} / ${item.size} / ${item.condition}</p>
             <strong>${money(item.price)}</strong>
           </div>
@@ -873,17 +789,17 @@ function addToCart(id) {
   const product = products.find((item) => item.id === id);
   state.cart.push({ ...product, cartId: crypto.randomUUID() });
   renderCart();
-  showToast(`${product.name} ${t("added")}`);
+  showToast(`${productName(product)} ${t("added")}`);
 }
 
 function openProduct(id) {
   const product = products.find((item) => item.id === id);
   dialogContent.innerHTML = `
     <div class="dialog-grid">
-      <img src="${product.detailImage || product.image}" alt="${product.name}" />
+      <img src="${product.detailImage || product.image}" alt="${productName(product)}" />
       <div class="dialog-info">
         <p class="eyebrow">${product.source}</p>
-        <h3>${product.name}</h3>
+        <h3>${productName(product)}</h3>
         <p>${product.note}</p>
         <div class="detail-list">
           <div><span>${t("detailCategory")}</span><strong>${tCategory(product.category)}</strong></div>
@@ -892,7 +808,6 @@ function openProduct(id) {
           <div><span>${t("detailPrice")}</span><strong>${money(product.price)}</strong></div>
         </div>
         <button class="primary-link" data-add="${product.id}" type="button">${t("addCart")}</button>
-        <a class="ghost-link" href="${product.upstreamUrl || UPSTREAM_SHOP_URL}">${t("viewSource")}</a>
       </div>
     </div>
   `;
@@ -983,7 +898,7 @@ document.querySelector("#checkoutButton").addEventListener("click", () => {
     return;
   }
 
-  const list = state.cart.map((item) => item.name).join("、");
+  const list = state.cart.map((item) => productName(item)).join("、");
   showToast(`${t("inquiryReady")}：${list}`);
 });
 

@@ -13,14 +13,13 @@
         <span class="brand-mark">拾</span>
         <span>
           <strong>拾衣選物</strong>
-          <small>直播後二手衣賣場</small>
+          <small>精選二手衣市場</small>
         </span>
       </a>
 
       <nav class="nav-links" aria-label="主要導覽">
         <a href="#products">現貨</a>
-        <a href="#live">直播場</a>
-        <a href="#partner">上游連結</a>
+        <a href="#market">市場資訊</a>
       </nav>
 
       <div class="top-actions">
@@ -30,12 +29,11 @@
             <span aria-hidden="true">⌄</span>
           </button>
           <div class="language-menu" id="languageMenu" role="listbox" aria-label="Language selection">
-            <button type="button" data-lang="en" role="option">English</button>
             <button type="button" data-lang="zh" role="option">中文</button>
-            <button type="button" data-lang="fil" role="option">Filipino</button>
-            <button type="button" data-lang="id" role="option">Indonesia</button>
-            <button type="button" data-lang="vi" role="option">Tiếng Việt</button>
-            <button type="button" data-lang="hi" role="option">हिन्दी</button>
+            <button type="button" data-lang="en" role="option">English</button>
+            <button type="button" data-lang="ja" role="option">日本語</button>
+            <button type="button" data-lang="ko" role="option">한국어</button>
+            <button type="button" data-lang="hk" role="option">香港繁中</button>
           </div>
         </div>
 
@@ -50,22 +48,19 @@
       <section class="storefront" aria-labelledby="storeTitle">
         <div class="store-copy">
           <p class="eyebrow">LIVE LEFTOVERS DROP</p>
-          <h1 id="storeTitle">直播沒被帶走的好衣服，在這裡重新被看見。</h1>
+          <h1 id="storeTitle">好的衣服值得被下一個妳遇見。</h1>
           <p>
-            適合做下游賣場的二手衣介面：直播後快速上架、清楚標示尺寸狀態，
-            客人可以直接挑選、加入購物車，再導到你的結帳流程。
+            精選二手衣市場：清楚標示尺寸、價格與衣況，客人可以直接挑選、加入購物車，
+            再整理成詢問清單。
           </p>
           <div class="store-actions">
             <a class="primary-link" href="#products">開始挑衣</a>
-            <a class="ghost-link" id="liveLink" href="https://www.tiktok.com/@pabilicloset.tw">
-              查看上游直播場
-            </a>
           </div>
         </div>
 
-        <div class="drop-panel" id="live" aria-label="本週直播後庫存摘要">
+        <div class="drop-panel" id="market" aria-label="市場庫存摘要">
           <div>
-            <span class="panel-label">本週新上架</span>
+            <span class="panel-label">現貨商品</span>
             <strong id="dropCount">8 件</strong>
           </div>
           <div>
@@ -73,21 +68,9 @@
             <strong id="averagePrice">NT$106</strong>
           </div>
           <div>
-            <span class="panel-label">直播未售出</span>
-            <strong>Pabili</strong>
+            <span class="panel-label">市場定位</span>
+            <strong>Pre-loved</strong>
           </div>
-        </div>
-      </section>
-
-      <section class="partner-strip" id="partner" aria-label="上游商店連結">
-        <div>
-          <span>上游商店</span>
-          <strong>家人直播衣櫥</strong>
-        </div>
-        <p>可放直播連結、原商品頁、LINE 社群或 Instagram，讓客人知道貨源與最新場次。</p>
-        <div class="partner-links">
-          <a id="sourceShopLink" href="https://swipeshop-delta.vercel.app/pabili.html">前往上游商店</a>
-          <a id="facebookLink" href="https://www.facebook.com/profile.php?id=61566271738744">Facebook</a>
         </div>
       </section>
 
@@ -135,7 +118,7 @@
             </div>
             <p id="resultCount">0 件商品</p>
           </div>
-          <p class="sync-status" id="syncStatus">正在連線同步上游商品...</p>
+          <p class="sync-status" id="syncStatus">正在同步商品庫存...</p>
 
           <div class="product-grid" id="productGrid"></div>
         </section>

@@ -87,7 +87,6 @@ a {
 .brand small,
 .panel-label,
 .eyebrow,
-.partner-strip span,
 .cart-head span,
 .cart-footer span {
   color: var(--muted);
@@ -109,7 +108,6 @@ a {
 .language-menu button,
 .primary-link,
 .ghost-link,
-.partner-strip a,
 .cart-footer button,
 .product-card button,
 .filter-heading button {
@@ -246,7 +244,6 @@ h1 {
 
 .primary-link,
 .ghost-link,
-.partner-strip a,
 .cart-footer button {
   display: inline-flex;
   align-items: center;
@@ -262,23 +259,9 @@ h1 {
   color: white;
 }
 
-.ghost-link,
-.partner-strip a {
+.ghost-link {
   border: 1px solid rgba(29, 36, 48, 0.18);
   background: rgba(255, 255, 255, 0.72);
-}
-
-.partner-links {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 10px;
-}
-
-.partner-links a {
-  pointer-events: auto;
 }
 
 .drop-panel {
@@ -304,29 +287,6 @@ h1 {
   display: block;
   margin-top: 8px;
   font-size: clamp(1.35rem, 3vw, 2.1rem);
-}
-
-.partner-strip {
-  position: relative;
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr) auto;
-  gap: 24px;
-  align-items: center;
-  padding: 24px clamp(18px, 5vw, 64px);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: #edf3ef;
-}
-
-.partner-strip strong {
-  display: block;
-  margin-top: 4px;
-}
-
-.partner-strip p {
-  margin: 0;
-  color: #495669;
-  line-height: 1.7;
 }
 
 .shop-layout {
@@ -765,7 +725,6 @@ input[type="range"] {
   }
 
   .drop-panel,
-  .partner-strip,
   .dialog-grid {
     grid-template-columns: 1fr;
   }
@@ -773,10 +732,6 @@ input[type="range"] {
   .drop-panel div + div {
     border-top: 1px solid var(--line);
     border-left: 0;
-  }
-
-  .partner-strip {
-    gap: 12px;
   }
 
   .product-grid {
