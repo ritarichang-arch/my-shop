@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>雙人數獨對戰</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">SUDOKU DUEL</p>
+        <h1>雙人數獨對戰</h1>
+        <p class="subtitle">同一題、同一初始盤面；對手填入的數字只會顯示為 *。</p>
+      </div>
+      <div class="actions">
+        <button id="nextPuzzle" type="button">換題</button>
+        <button id="restartPuzzle" type="button">重新開始</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="status-panel">
+        <div>
+          <span>目前題目</span>
+          <strong id="puzzleName">-</strong>
+        </div>
+        <div>
+          <span>目前操作</span>
+          <strong id="activePlayer">玩家 A</strong>
+        </div>
+        <div>
+          <span>選取數字</span>
+          <strong id="selectedNumber">1</strong>
+        </div>
+      </section>
+
+      <section class="number-pad" aria-label="數字選擇">
+        <button class="active" type="button" data-number="1">1</button>
+        <button type="button" data-number="2">2</button>
+        <button type="button" data-number="3">3</button>
+        <button type="button" data-number="4">4</button>
+        <button type="button" data-number="5">5</button>
+        <button type="button" data-number="6">6</button>
+        <button type="button" data-number="7">7</button>
+        <button type="button" data-number="8">8</button>
+        <button type="button" data-number="9">9</button>
+        <button type="button" data-number="">清除</button>
+      </section>
+
+      <p class="message" id="message">選上方數字，再點自己的棋盤空格。</p>
+
+      <section class="duel-layout">
+        <article class="player-panel player-a">
+          <div class="player-head">
+            <h2>玩家 A</h2>
+            <p id="score1">0 / 81</p>
+          </div>
+          <div class="board" id="board1" aria-label="玩家 A 棋盤"></div>
+        </article>
+
+        <article class="player-panel player-b">
+          <div class="player-head">
+            <h2>玩家 B</h2>
+            <p id="score2">0 / 81</p>
+          </div>
+          <div class="board" id="board2" aria-label="玩家 B 棋盤"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

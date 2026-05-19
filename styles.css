@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -497,8 +501,6 @@ input[type="range"] {
   z-index: 20;
   top: 0;
   right: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
   width: min(420px, 100vw);
   height: 100vh;
   background: white;
@@ -509,6 +511,15 @@ input[type="range"] {
 
 .cart-drawer.open {
   transform: translateX(0);
+}
+
+.cart-view,
+.checkout-view,
+.shipping-view,
+.order-complete-view {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
 }
 
 .cart-head,
@@ -541,6 +552,204 @@ input[type="range"] {
 .cart-items {
   overflow: auto;
   padding: 16px 20px;
+}
+
+.checkout-form {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  overflow: auto;
+  padding: 18px 20px;
+}
+
+.checkout-form label,
+.address-fieldset {
+  display: grid;
+  gap: 7px;
+  color: #3f4a5a;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfd;
+  color: var(--ink);
+  padding: 11px 12px;
+  font: inherit;
+  resize: vertical;
+}
+
+.address-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+}
+
+.address-grid label:nth-child(4) {
+  grid-column: auto;
+}
+
+.store-picker,
+.nextday-picker {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8faf8;
+}
+
+.delivery-methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.delivery-methods legend {
+  width: 100%;
+}
+
+.delivery-methods label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+}
+
+.map-preview {
+  min-height: 150px;
+  display: grid;
+  place-items: center;
+  gap: 6px;
+  border: 1px dashed #9fb0c2;
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(64, 110, 142, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(64, 110, 142, 0.08) 1px, transparent 1px),
+    #eef4f1;
+  background-size: 28px 28px;
+  color: #31445a;
+  text-align: center;
+  text-decoration: none;
+}
+
+.map-preview span {
+  border-radius: 999px;
+  background: var(--ink);
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+.nextday-extra {
+  display: grid;
+  gap: 10px;
+}
+
+.store-route {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.store-route div {
+  display: grid;
+  gap: 4px;
+  padding: 10px;
+  border-radius: 8px;
+  background: white;
+}
+
+.store-route span,
+.store-picker label span {
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.store-route strong {
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.secondary-button {
+  border: 1px solid var(--line);
+  background: #edf1f5;
+  color: #3f4a5a;
+}
+
+.shipping-content,
+.complete-content {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  overflow: auto;
+  padding: 18px 20px;
+}
+
+.option-group {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.option-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfd;
+  cursor: pointer;
+}
+
+.option-card strong,
+.option-card small {
+  display: block;
+}
+
+.option-card small {
+  margin-top: 4px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.order-summary-box {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #f3f6f5;
+}
+
+.order-summary-box div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.complete-content > strong {
+  font-size: 1.45rem;
+}
+
+.complete-content p {
+  color: #4b5869;
+  line-height: 1.7;
 }
 
 .cart-item {
@@ -749,5 +958,9 @@ input[type="range"] {
 
   .dialog-info {
     padding: 24px;
+  }
+
+  .store-route {
+    grid-template-columns: 1fr;
   }
 }

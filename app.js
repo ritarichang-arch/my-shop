@@ -210,7 +210,32 @@ const I18N = {
     emptyCartBody: "Add clothes you like, then send the checkout inquiry together.",
     notSelected: "No items yet",
     subtotal: "Subtotal",
-    checkout: "Ask to checkout",
+    checkout: "Checkout",
+    checkoutTitle: "Recipient information",
+    recipientName: "Recipient name",
+    recipientPhone: "Mobile number",
+    recipientAddress: "Delivery address",
+    city: "City",
+    district: "District",
+    road: "Road / Street",
+    number: "No.",
+    room: "Room",
+    shippingStoreBrand: "Pickup store",
+    chooseStoreBrand: "Choose store",
+    storeCity: "City",
+    storeDistrict: "District",
+    storeRoad: "Road / Street",
+    storeOption: "Store options",
+    enterRoadFirst: "Enter road / street first",
+    recipientNote: "Note",
+    recipientNamePlaceholder: "Enter recipient name",
+    recipientPhonePlaceholder: "Enter mobile number",
+    recipientAddressPlaceholder: "Enter delivery address",
+    recipientNotePlaceholder: "Example: delivery time, size confirmation, etc.",
+    backToCart: "Back to cart",
+    backToInfo: "Back to previous page",
+    confirmInfo: "Confirm info",
+    closeCheckout: "Close checkout",
     remove: "Remove",
     added: "added to cart",
     addFirst: "Please add an item first",
@@ -267,7 +292,32 @@ const I18N = {
     emptyCartBody: "先把喜歡的二手衣加進來，再一起詢問結帳。",
     notSelected: "尚未選購",
     subtotal: "小計",
-    checkout: "詢問結帳",
+    checkout: "結帳",
+    checkoutTitle: "收件者資料",
+    recipientName: "收件者姓名",
+    recipientPhone: "手機號碼",
+    recipientAddress: "收件地址",
+    city: "縣市",
+    district: "區",
+    road: "路（街）",
+    number: "號",
+    room: "室",
+    shippingStoreBrand: "寄送超商",
+    chooseStoreBrand: "請選擇超商",
+    storeCity: "縣市",
+    storeDistrict: "區",
+    storeRoad: "路（街）",
+    storeOption: "門市選項",
+    enterRoadFirst: "請先輸入路（街）",
+    recipientNote: "備註",
+    recipientNamePlaceholder: "請輸入姓名",
+    recipientPhonePlaceholder: "請輸入手機號碼",
+    recipientAddressPlaceholder: "請輸入收件地址",
+    recipientNotePlaceholder: "例如：方便收件時間、尺寸確認等",
+    backToCart: "返回購物車",
+    backToInfo: "返回上一頁",
+    confirmInfo: "確認資料",
+    closeCheckout: "關閉結帳",
     remove: "移除",
     added: "已加入購物車",
     addFirst: "請先加入想購買的商品",
@@ -324,7 +374,32 @@ const I18N = {
     emptyCartBody: "気になる服を追加して、まとめて問い合わせできます。",
     notSelected: "商品はまだありません",
     subtotal: "小計",
-    checkout: "問い合わせ",
+    checkout: "購入手続き",
+    checkoutTitle: "お届け先情報",
+    recipientName: "受取人名",
+    recipientPhone: "電話番号",
+    recipientAddress: "お届け先住所",
+    city: "市区町村",
+    district: "区",
+    road: "道路 / 通り",
+    number: "番地",
+    room: "部屋番号",
+    shippingStoreBrand: "受取コンビニ",
+    chooseStoreBrand: "コンビニを選択",
+    storeCity: "市区町村",
+    storeDistrict: "区",
+    storeRoad: "道路 / 通り",
+    storeOption: "店舗候補",
+    enterRoadFirst: "道路名を入力してください",
+    recipientNote: "メモ",
+    recipientNamePlaceholder: "お名前を入力",
+    recipientPhonePlaceholder: "電話番号を入力",
+    recipientAddressPlaceholder: "住所を入力",
+    recipientNotePlaceholder: "例：受け取り時間、サイズ確認など",
+    backToCart: "カートに戻る",
+    backToInfo: "前のページに戻る",
+    confirmInfo: "情報を確認",
+    closeCheckout: "購入手続きを閉じる",
     remove: "削除",
     added: "をカートに追加しました",
     addFirst: "先に商品を追加してください",
@@ -381,7 +456,32 @@ const I18N = {
     emptyCartBody: "마음에 드는 옷을 담고 한 번에 문의하세요.",
     notSelected: "아직 상품이 없습니다",
     subtotal: "소계",
-    checkout: "문의하기",
+    checkout: "결제",
+    checkoutTitle: "수령자 정보",
+    recipientName: "수령자 이름",
+    recipientPhone: "휴대폰 번호",
+    recipientAddress: "배송 주소",
+    city: "도시",
+    district: "구",
+    road: "도로명 / 거리",
+    number: "번지",
+    room: "호실",
+    shippingStoreBrand: "수령 편의점",
+    chooseStoreBrand: "편의점 선택",
+    storeCity: "도시",
+    storeDistrict: "구",
+    storeRoad: "도로명 / 거리",
+    storeOption: "매장 옵션",
+    enterRoadFirst: "도로명을 먼저 입력하세요",
+    recipientNote: "메모",
+    recipientNamePlaceholder: "이름을 입력하세요",
+    recipientPhonePlaceholder: "휴대폰 번호를 입력하세요",
+    recipientAddressPlaceholder: "배송 주소를 입력하세요",
+    recipientNotePlaceholder: "예: 수령 가능 시간, 사이즈 확인 등",
+    backToCart: "장바구니로",
+    backToInfo: "이전 페이지로",
+    confirmInfo: "정보 확인",
+    closeCheckout: "결제 닫기",
     remove: "삭제",
     added: "장바구니에 담았습니다",
     addFirst: "먼저 상품을 담아주세요",
@@ -438,7 +538,32 @@ const I18N = {
     emptyCartBody: "先將鍾意嘅二手衫加入，再一齊查詢結帳。",
     notSelected: "未揀商品",
     subtotal: "小計",
-    checkout: "查詢結帳",
+    checkout: "結帳",
+    checkoutTitle: "收件人資料",
+    recipientName: "收件人姓名",
+    recipientPhone: "手提電話",
+    recipientAddress: "收件地址",
+    city: "城市",
+    district: "區",
+    road: "路（街）",
+    number: "號",
+    room: "室",
+    shippingStoreBrand: "寄送超商",
+    chooseStoreBrand: "請選擇超商",
+    storeCity: "城市",
+    storeDistrict: "區",
+    storeRoad: "路（街）",
+    storeOption: "門市選項",
+    enterRoadFirst: "請先輸入路（街）",
+    recipientNote: "備註",
+    recipientNamePlaceholder: "請輸入姓名",
+    recipientPhonePlaceholder: "請輸入手提電話",
+    recipientAddressPlaceholder: "請輸入收件地址",
+    recipientNotePlaceholder: "例如：方便收件時間、尺碼確認等",
+    backToCart: "返回購物車",
+    backToInfo: "返回上一頁",
+    confirmInfo: "確認資料",
+    closeCheckout: "關閉結帳",
     remove: "移除",
     added: "已加入購物車",
     addFirst: "請先加入想買嘅商品",
@@ -626,6 +751,68 @@ const toast = document.querySelector("#toast");
 const languageToggle = document.querySelector("#languageToggle");
 const languageMenu = document.querySelector("#languageMenu");
 const languageCode = document.querySelector("#languageCode");
+const cartView = document.querySelector("#cartView");
+const checkoutView = document.querySelector("#checkoutView");
+const shippingView = document.querySelector("#shippingView");
+const orderCompleteView = document.querySelector("#orderCompleteView");
+const checkoutTitle = document.querySelector("#checkoutTitle");
+const checkoutEyebrow = document.querySelector("#checkoutEyebrow");
+const recipientName = document.querySelector("#recipientName");
+const recipientPhone = document.querySelector("#recipientPhone");
+const recipientCity = document.querySelector("#recipientCity");
+const recipientDistrict = document.querySelector("#recipientDistrict");
+const nextdayCity = document.querySelector("#nextdayCity");
+const nextdayDistrict = document.querySelector("#nextdayDistrict");
+const recipientRoadHome = document.querySelector("#recipientRoadHome");
+const recipientNumber = document.querySelector("#recipientNumber");
+const recipientRoom = document.querySelector("#recipientRoom");
+const recipientNote = document.querySelector("#recipientNote");
+const storePicker = document.querySelector("#storePicker");
+const storeOption = document.querySelector("#storeOption");
+const nextdayPicker = document.querySelector("#nextdayPicker");
+const storeMap = document.querySelector("#storeMap");
+const mapBrand = document.querySelector("#mapBrand");
+const onlineDelegateOptions = document.querySelector("#onlineDelegateOptions");
+const cashPickupOptions = document.querySelector("#cashPickupOptions");
+const shippingSubtotal = document.querySelector("#shippingSubtotal");
+const shippingFee = document.querySelector("#shippingFee");
+const shippingTotal = document.querySelector("#shippingTotal");
+const completePayment = document.querySelector("#completePayment");
+const completeTotal = document.querySelector("#completeTotal");
+const completeMessage = document.querySelector("#completeMessage");
+
+const LINE_PAY_ENTRY_URL = "https://pay.line.me/portal/tw/main";
+const VISA_INFO_URL = "https://www.nccc.com.tw/wps/wcm/connect/zh/home/BusinessOperations/BusinessIntroduction/AcquiringBusiness";
+
+const demoStoreSuffixes = {
+  seven: ["生活門市", "新晴門市", "樂購門市"],
+  family: ["便利店", "新生活店", "好鄰居店"]
+};
+
+const districtData = {
+  基隆市: ["200 仁愛區", "201 信義區", "202 中正區", "203 中山區", "204 安樂區", "205 暖暖區", "206 七堵區"],
+  台北市: ["100 中正區", "103 大同區", "104 中山區", "105 松山區", "106 大安區", "108 萬華區", "110 信義區", "111 士林區", "112 北投區", "114 內湖區", "115 南港區", "116 文山區"],
+  新北市: ["207 萬里區", "208 金山區", "220 板橋區", "221 汐止區", "222 深坑區", "223 石碇區", "224 瑞芳區", "226 平溪區", "227 雙溪區", "228 貢寮區", "231 新店區", "232 坪林區", "233 烏來區", "234 永和區", "235 中和區", "236 土城區", "237 三峽區", "238 樹林區", "239 鶯歌區", "241 三重區", "242 新莊區", "243 泰山區", "244 林口區", "247 蘆洲區", "248 五股區", "249 八里區", "251 淡水區", "252 三芝區", "253 石門區"],
+  桃園市: ["320 中壢區", "324 平鎮區", "325 龍潭區", "326 楊梅區", "327 新屋區", "328 觀音區", "330 桃園區", "333 龜山區", "334 八德區", "335 大溪區", "336 復興區", "337 大園區", "338 蘆竹區"],
+  新竹市: ["300 東區", "300 北區", "300 香山區"],
+  新竹縣: ["302 竹北市", "303 湖口鄉", "304 新豐鄉", "305 新埔鎮", "306 關西鎮", "307 芎林鄉", "308 寶山鄉", "310 竹東鎮", "311 五峰鄉", "312 橫山鄉", "313 尖石鄉", "314 北埔鄉", "315 峨眉鄉"],
+  苗栗縣: ["350 竹南鎮", "351 頭份市", "352 三灣鄉", "353 南庄鄉", "354 獅潭鄉", "356 後龍鎮", "357 通霄鎮", "358 苑裡鎮", "360 苗栗市", "361 造橋鄉", "362 頭屋鄉", "363 公館鄉", "364 大湖鄉", "365 泰安鄉", "366 銅鑼鄉", "367 三義鄉", "368 西湖鄉", "369 卓蘭鎮"],
+  台中市: ["400 中區", "401 東區", "402 南區", "403 西區", "404 北區", "406 北屯區", "407 西屯區", "408 南屯區", "411 太平區", "412 大里區", "413 霧峰區", "414 烏日區", "420 豐原區", "421 后里區", "422 石岡區", "423 東勢區", "424 和平區", "426 新社區", "427 潭子區", "428 大雅區", "429 神岡區", "432 大肚區", "433 沙鹿區", "434 龍井區", "435 梧棲區", "436 清水區", "437 大甲區", "438 外埔區", "439 大安區"],
+  彰化縣: ["500 彰化市", "502 芬園鄉", "503 花壇鄉", "504 秀水鄉", "505 鹿港鎮", "506 福興鄉", "507 線西鄉", "508 和美鎮", "509 伸港鄉", "510 員林市", "511 社頭鄉", "512 永靖鄉", "513 埔心鄉", "514 溪湖鎮", "515 大村鄉", "516 埔鹽鄉", "520 田中鎮", "521 北斗鎮", "522 田尾鄉", "523 埤頭鄉", "524 溪州鄉", "525 竹塘鄉", "526 二林鎮", "527 大城鄉", "528 芳苑鄉", "530 二水鄉"],
+  南投縣: ["540 南投市", "541 中寮鄉", "542 草屯鎮", "544 國姓鄉", "545 埔里鎮", "546 仁愛鄉", "551 名間鄉", "552 集集鎮", "553 水里鄉", "555 魚池鄉", "556 信義鄉", "557 竹山鎮", "558 鹿谷鄉"],
+  雲林縣: ["630 斗南鎮", "631 大埤鄉", "632 虎尾鎮", "633 土庫鎮", "634 褒忠鄉", "635 東勢鄉", "636 台西鄉", "637 崙背鄉", "638 麥寮鄉", "640 斗六市", "643 林內鄉", "646 古坑鄉", "647 莿桐鄉", "648 西螺鎮", "649 二崙鄉", "651 北港鎮", "652 水林鄉", "653 口湖鄉", "654 四湖鄉", "655 元長鄉"],
+  嘉義市: ["600 東區", "600 西區"],
+  嘉義縣: ["602 番路鄉", "603 梅山鄉", "604 竹崎鄉", "605 阿里山鄉", "606 中埔鄉", "607 大埔鄉", "608 水上鄉", "611 鹿草鄉", "612 太保市", "613 朴子市", "614 東石鄉", "615 六腳鄉", "616 新港鄉", "621 民雄鄉", "622 大林鎮", "623 溪口鄉", "624 義竹鄉", "625 布袋鎮"],
+  台南市: ["700 中西區", "701 東區", "702 南區", "704 北區", "708 安平區", "709 安南區", "710 永康區", "711 歸仁區", "712 新化區", "713 左鎮區", "714 玉井區", "715 楠西區", "716 南化區", "717 仁德區", "718 關廟區", "719 龍崎區", "720 官田區", "721 麻豆區", "722 佳里區", "723 西港區", "724 七股區", "725 將軍區", "726 學甲區", "727 北門區", "730 新營區", "731 後壁區", "732 白河區", "733 東山區", "734 六甲區", "735 下營區", "736 柳營區", "737 鹽水區", "741 善化區", "742 大內區", "743 山上區", "744 新市區", "745 安定區"],
+  高雄市: ["800 新興區", "801 前金區", "802 苓雅區", "803 鹽埕區", "804 鼓山區", "805 旗津區", "806 前鎮區", "807 三民區", "811 楠梓區", "812 小港區", "813 左營區", "814 仁武區", "815 大社區", "820 岡山區", "821 路竹區", "822 阿蓮區", "823 田寮區", "824 燕巢區", "825 橋頭區", "826 梓官區", "827 彌陀區", "828 永安區", "829 湖內區", "830 鳳山區", "831 大寮區", "832 林園區", "833 鳥松區", "840 大樹區", "842 旗山區", "843 美濃區", "844 六龜區", "845 內門區", "846 杉林區", "847 甲仙區", "848 桃源區", "849 那瑪夏區", "851 茂林區", "852 茄萣區"],
+  屏東縣: ["900 屏東市", "901 三地門鄉", "902 霧台鄉", "903 瑪家鄉", "904 九如鄉", "905 里港鄉", "906 高樹鄉", "907 鹽埔鄉", "908 長治鄉", "909 麟洛鄉", "911 竹田鄉", "912 內埔鄉", "913 萬丹鄉", "920 潮州鎮", "921 泰武鄉", "922 來義鄉", "923 萬巒鄉", "924 崁頂鄉", "925 新埤鄉", "926 南州鄉", "927 林邊鄉", "928 東港鎮", "929 琉球鄉", "931 佳冬鄉", "932 新園鄉", "940 枋寮鄉", "941 枋山鄉", "942 春日鄉", "943 獅子鄉", "944 車城鄉", "945 牡丹鄉", "946 恆春鎮", "947 滿州鄉"],
+  宜蘭縣: ["260 宜蘭市", "261 頭城鎮", "262 礁溪鄉", "263 壯圍鄉", "264 員山鄉", "265 羅東鎮", "266 三星鄉", "267 大同鄉", "268 五結鄉", "269 冬山鄉", "270 蘇澳鎮", "272 南澳鄉", "290 釣魚台"],
+  花蓮縣: ["970 花蓮市", "971 新城鄉", "972 秀林鄉", "973 吉安鄉", "974 壽豐鄉", "975 鳳林鎮", "976 光復鄉", "977 豐濱鄉", "978 瑞穗鄉", "979 萬榮鄉", "981 玉里鎮", "982 卓溪鄉", "983 富里鄉"],
+  台東縣: ["950 台東市", "951 綠島鄉", "952 蘭嶼鄉", "953 延平鄉", "954 卑南鄉", "955 鹿野鄉", "956 關山鎮", "957 海端鄉", "958 池上鄉", "959 東河鄉", "961 成功鎮", "962 長濱鄉", "963 太麻里鄉", "964 金峰鄉", "965 大武鄉", "966 達仁鄉"],
+  澎湖縣: ["880 馬公市", "881 西嶼鄉", "882 望安鄉", "883 七美鄉", "884 白沙鄉", "885 湖西鄉"],
+  金門縣: ["890 金沙鎮", "891 金湖鎮", "892 金寧鄉", "893 金城鎮", "894 烈嶼鄉", "896 烏坵鄉"],
+  連江縣: ["209 南竿鄉", "210 北竿鄉", "211 莒光鄉", "212 東引鄉"]
+};
 
 function money(value) {
   return `NT$${formatter.format(value).replace(/[^\d,.-]/g, "")}`;
@@ -679,7 +866,28 @@ function applyLanguage() {
   setText(".cart-head span", t("cart"));
   setText(".cart-footer span", t("subtotal"));
   setText("#checkoutButton", t("checkout"));
+  setText("#checkoutEyebrow", t("checkout"));
+  setText("#checkoutTitle", t("checkoutTitle"));
+  setText("#recipientNameLabel", t("recipientName"));
+  setText("#recipientPhoneLabel", t("recipientPhone"));
+  setText("#cityLabel", t("city"));
+  setText("#districtLabel", t("district"));
+  setText("#roadLabel", t("road"));
+  setText("#numberLabel", t("number"));
+  setText("#roomLabel", t("room"));
+  setText("#storeCityLabel", t("storeCity"));
+  setText("#storeDistrictLabel", t("storeDistrict"));
+  setText("#storeOptionLabel", t("storeOption"));
+  setText("#recipientNoteLabel", t("recipientNote"));
+  setText("#backToCart", t("backToCart"));
+  setText("#backToInfo", t("backToInfo"));
+  setText("#confirmCheckout", t("confirmInfo"));
+  recipientName.placeholder = t("recipientNamePlaceholder");
+  recipientPhone.placeholder = t("recipientPhonePlaceholder");
+  recipientRoadHome.placeholder = t("recipientAddressPlaceholder");
+  recipientNote.placeholder = t("recipientNotePlaceholder");
   document.querySelector("#closeCart").setAttribute("aria-label", t("closeCart"));
+  document.querySelector("#closeCheckout").setAttribute("aria-label", t("closeCheckout"));
   document.querySelector("#closeDialog").setAttribute("aria-label", t("closeDetail"));
 
   renderProducts();
@@ -785,6 +993,125 @@ function showToast(message) {
   showToast.timer = window.setTimeout(() => toast.classList.remove("show"), 1800);
 }
 
+function showCartView() {
+  cartView.hidden = false;
+  checkoutView.hidden = true;
+  shippingView.hidden = true;
+  orderCompleteView.hidden = true;
+}
+
+function showCheckoutView() {
+  cartDrawer.classList.add("open");
+  cartDrawer.setAttribute("aria-hidden", "false");
+  cartView.hidden = true;
+  checkoutView.removeAttribute("hidden");
+  shippingView.hidden = true;
+  orderCompleteView.hidden = true;
+  checkoutTitle.textContent = t("checkoutTitle");
+  checkoutEyebrow.textContent = t("checkout");
+}
+
+function goBackToRecipientInfo() {
+  showCheckoutView();
+  return false;
+}
+
+window.goBackToRecipientInfo = goBackToRecipientInfo;
+
+function subtotalValue() {
+  return state.cart.reduce((sum, item) => sum + item.price, 0);
+}
+
+function currentShippingFee() {
+  const method = document.querySelector("input[name='shippingMethod']:checked")?.value || "seven";
+  if (method === "seven") return state.cart.length >= 2 ? 60 : 38;
+  return 60;
+}
+
+function updateShippingSummary() {
+  const subtotal = subtotalValue();
+  const fee = currentShippingFee();
+  shippingSubtotal.textContent = money(subtotal);
+  shippingFee.textContent = money(fee);
+  shippingTotal.textContent = money(subtotal + fee);
+}
+
+function showShippingView() {
+  cartView.hidden = true;
+  checkoutView.hidden = true;
+  shippingView.hidden = false;
+  orderCompleteView.hidden = true;
+  updateShippingSummary();
+}
+
+function showOrderCompleteView() {
+  const payment = document.querySelector("input[name='paymentMethod']:checked")?.value || "cash";
+  const paymentLabel = {
+    cash: "現金取貨付款",
+    linepay: "LINE Pay",
+    visa: "Visa 線上支付"
+  }[payment];
+
+  completePayment.textContent = paymentLabel;
+  completeTotal.textContent = money(subtotalValue() + currentShippingFee());
+  completeMessage.textContent =
+    payment === "cash"
+      ? "已收到你的訂單資料，請依選擇的超商取貨付款。"
+      : "此付款方式目前是介面預覽，正式收款需要串接金流與商店審核。";
+
+  cartView.hidden = true;
+  checkoutView.hidden = true;
+  shippingView.hidden = true;
+  orderCompleteView.hidden = false;
+}
+
+function renderDistrictOptions(citySelect = recipientCity, districtSelect = recipientDistrict) {
+  const districts = districtData[citySelect.value] || [];
+  districtSelect.innerHTML = districts
+    .map((item) => `<option value="${item}">${item}</option>`)
+    .join("");
+}
+
+function renderCityOptions() {
+  const options = Object.keys(districtData)
+    .map((city) => `<option value="${city}">${city}</option>`)
+    .join("");
+  recipientCity.innerHTML = options;
+  nextdayCity.innerHTML = options;
+  recipientCity.value = "台中市";
+  nextdayCity.value = "台中市";
+  renderDistrictOptions(recipientCity, recipientDistrict);
+  renderDistrictOptions(nextdayCity, nextdayDistrict);
+}
+
+function renderStoreOptions() {
+  const method = document.querySelector("input[name='deliveryMethod']:checked")?.value || "seven";
+  const isStore = method === "seven" || method === "family";
+  storePicker.hidden = !isStore;
+  nextdayPicker.hidden = isStore;
+  if (!isStore) return;
+  const city = recipientCity.value;
+  const district = recipientDistrict.value;
+  const prefix = method === "seven" ? "7-11" : "全家";
+  mapBrand.textContent = prefix;
+  const mapQuery = encodeURIComponent(`${city} ${district} ${prefix}`);
+  storeMap.href = `https://www.google.com/maps/search/${mapQuery}`;
+  const suffixes = demoStoreSuffixes[method];
+  storeOption.innerHTML = suffixes
+    .map((suffix, index) => {
+      const storeName = `${prefix} ${district.replace(/^[0-9]{3}\\s*/, "")}${suffix}`;
+      const address = `${city}${district}${index + 1}號`;
+      return `<option value="${storeName}">${storeName}｜${address}</option>`;
+    })
+    .join("");
+}
+
+function renderNextdayPaymentOptions() {
+  const payment = document.querySelector("input[name='nextdayPayment']:checked")?.value || "cash";
+  cashPickupOptions.hidden = payment !== "cash";
+  onlineDelegateOptions.hidden = payment !== "online";
+}
+
 function addToCart(id) {
   const product = products.find((item) => item.id === id);
   state.cart.push({ ...product, cartId: crypto.randomUUID() });
@@ -881,6 +1208,7 @@ cartItems.addEventListener("click", (event) => {
 });
 
 document.querySelector("#cartToggle").addEventListener("click", () => {
+  showCartView();
   cartDrawer.classList.add("open");
   cartDrawer.setAttribute("aria-hidden", "false");
 });
@@ -888,6 +1216,7 @@ document.querySelector("#cartToggle").addEventListener("click", () => {
 document.querySelector("#closeCart").addEventListener("click", () => {
   cartDrawer.classList.remove("open");
   cartDrawer.setAttribute("aria-hidden", "true");
+  showCartView();
 });
 
 document.querySelector("#closeDialog").addEventListener("click", () => productDialog.close());
@@ -898,8 +1227,68 @@ document.querySelector("#checkoutButton").addEventListener("click", () => {
     return;
   }
 
-  const list = state.cart.map((item) => productName(item)).join("、");
-  showToast(`${t("inquiryReady")}：${list}`);
+  showCheckoutView();
+});
+
+document.querySelector("#backToCart").addEventListener("click", () => {
+  showCartView();
+});
+
+document.querySelector("#closeCheckout").addEventListener("click", () => {
+  cartDrawer.classList.remove("open");
+  cartDrawer.setAttribute("aria-hidden", "true");
+  showCartView();
+});
+
+document.querySelector("#confirmCheckout").addEventListener("click", () => {
+  showShippingView();
+});
+
+document.querySelector("#closeShipping").addEventListener("click", () => {
+  cartDrawer.classList.remove("open");
+  cartDrawer.setAttribute("aria-hidden", "true");
+  showCartView();
+});
+
+document.querySelector("#completeOrder").addEventListener("click", () => {
+  const payment = document.querySelector("input[name='paymentMethod']:checked")?.value || "cash";
+  if (payment === "linepay") {
+    window.location.href = LINE_PAY_ENTRY_URL;
+    return;
+  }
+  if (payment === "visa") {
+    showToast("Visa 正式付款需先串接金流服務，目前先保留介面。");
+    window.location.href = VISA_INFO_URL;
+    return;
+  }
+  showOrderCompleteView();
+});
+
+document.querySelector("#closeComplete").addEventListener("click", () => {
+  cartDrawer.classList.remove("open");
+  cartDrawer.setAttribute("aria-hidden", "true");
+  showCartView();
+});
+
+document.querySelectorAll("input[name='shippingMethod']").forEach((input) => {
+  input.addEventListener("change", updateShippingSummary);
+});
+
+recipientCity.addEventListener("change", () => {
+  renderDistrictOptions(recipientCity, recipientDistrict);
+  renderStoreOptions();
+});
+
+nextdayCity.addEventListener("change", () => {
+  renderDistrictOptions(nextdayCity, nextdayDistrict);
+});
+
+recipientDistrict.addEventListener("change", renderStoreOptions);
+document.querySelectorAll("input[name='deliveryMethod']").forEach((input) => {
+  input.addEventListener("change", renderStoreOptions);
+});
+document.querySelectorAll("input[name='nextdayPayment']").forEach((input) => {
+  input.addEventListener("change", renderNextdayPaymentOptions);
 });
 
 languageToggle.addEventListener("click", () => {
@@ -924,4 +1313,7 @@ document.addEventListener("click", (event) => {
 });
 
 applyLanguage();
+renderCityOptions();
+renderStoreOptions();
+renderNextdayPaymentOptions();
 syncUpstreamProducts();
