@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>拾衣選物 | 直播後二手衣賣場</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="拾衣選物首頁">
+        <span class="brand-mark">拾</span>
+        <span>
+          <strong>拾衣選物</strong>
+          <small>直播後二手衣賣場</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="主要導覽">
+        <a href="#products">現貨</a>
+        <a href="#live">直播場</a>
+        <a href="#partner">上游連結</a>
+      </nav>
+
+      <div class="top-actions">
+        <div class="language-picker">
+          <button class="language-button" id="languageToggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+            <span id="languageCode">EN</span>
+            <span aria-hidden="true">⌄</span>
+          </button>
+          <div class="language-menu" id="languageMenu" role="listbox" aria-label="Language selection">
+            <button type="button" data-lang="en" role="option">English</button>
+            <button type="button" data-lang="zh" role="option">中文</button>
+            <button type="button" data-lang="fil" role="option">Filipino</button>
+            <button type="button" data-lang="id" role="option">Indonesia</button>
+            <button type="button" data-lang="vi" role="option">Tiếng Việt</button>
+            <button type="button" data-lang="hi" role="option">हिन्दी</button>
+          </div>
+        </div>
+
+        <button class="cart-button" id="cartToggle" type="button" aria-label="Open cart">
+          <span>Cart</span>
+          <strong id="cartCount">0</strong>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="storefront" aria-labelledby="storeTitle">
+        <div class="store-copy">
+          <p class="eyebrow">LIVE LEFTOVERS DROP</p>
+          <h1 id="storeTitle">直播沒被帶走的好衣服，在這裡重新被看見。</h1>
+          <p>
+            適合做下游賣場的二手衣介面：直播後快速上架、清楚標示尺寸狀態，
+            客人可以直接挑選、加入購物車，再導到你的結帳流程。
+          </p>
+          <div class="store-actions">
+            <a class="primary-link" href="#products">開始挑衣</a>
+            <a class="ghost-link" id="liveLink" href="https://www.tiktok.com/@pabilicloset.tw">
+              查看上游直播場
+            </a>
+          </div>
+        </div>
+
+        <div class="drop-panel" id="live" aria-label="本週直播後庫存摘要">
+          <div>
+            <span class="panel-label">本週新上架</span>
+            <strong id="dropCount">8 件</strong>
+          </div>
+          <div>
+            <span class="panel-label">平均單價</span>
+            <strong id="averagePrice">NT$106</strong>
+          </div>
+          <div>
+            <span class="panel-label">直播未售出</span>
+            <strong>Pabili</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="partner-strip" id="partner" aria-label="上游商店連結">
+        <div>
+          <span>上游商店</span>
+          <strong>家人直播衣櫥</strong>
+        </div>
+        <p>可放直播連結、原商品頁、LINE 社群或 Instagram，讓客人知道貨源與最新場次。</p>
+        <div class="partner-links">
+          <a id="sourceShopLink" href="https://swipeshop-delta.vercel.app/pabili.html">前往上游商店</a>
+          <a id="facebookLink" href="https://www.facebook.com/profile.php?id=61566271738744">Facebook</a>
+        </div>
+      </section>
+
+      <section class="shop-layout" id="products">
+        <aside class="filters" aria-label="商品篩選">
+          <div class="filter-heading">
+            <span>篩選</span>
+            <button id="resetFilters" type="button">重設</button>
+          </div>
+
+          <label class="search-field">
+            <span>搜尋商品</span>
+            <input id="searchInput" type="search" placeholder="洋裝、外套、牛仔..." />
+          </label>
+
+          <fieldset>
+            <legend>分類</legend>
+            <label><input type="radio" name="category" value="全部" checked />全部</label>
+            <label><input type="radio" name="category" value="上衣" />上衣</label>
+            <label><input type="radio" name="category" value="外套" />外套</label>
+            <label><input type="radio" name="category" value="洋裝" />洋裝</label>
+            <label><input type="radio" name="category" value="褲裙" />褲裙</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>尺寸</legend>
+            <label><input type="checkbox" name="size" value="XS" />XS</label>
+            <label><input type="checkbox" name="size" value="S" />S</label>
+            <label><input type="checkbox" name="size" value="M" />M</label>
+            <label><input type="checkbox" name="size" value="L" />L</label>
+            <label><input type="checkbox" name="size" value="Free" />Free</label>
+          </fieldset>
+
+          <label class="range-field">
+            <span>最高預算 <strong id="budgetLabel">NT$900</strong></span>
+            <input id="budgetRange" type="range" min="50" max="1200" step="10" value="900" />
+          </label>
+        </aside>
+
+        <section class="catalog" aria-label="商品清單">
+          <div class="catalog-head">
+            <div>
+              <p class="eyebrow">READY TO SHIP</p>
+              <h2>直播後現貨</h2>
+            </div>
+            <p id="resultCount">0 件商品</p>
+          </div>
+          <p class="sync-status" id="syncStatus">正在連線同步上游商品...</p>
+
+          <div class="product-grid" id="productGrid"></div>
+        </section>
+      </section>
+    </main>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-label="購物車" aria-hidden="true">
+      <div class="cart-head">
+        <div>
+          <span>購物車</span>
+          <strong id="cartTitle">尚未選購</strong>
+        </div>
+        <button class="icon-button" id="closeCart" type="button" aria-label="關閉購物車">×</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+        <div>
+          <span>小計</span>
+          <strong id="cartTotal">NT$0</strong>
+        </div>
+        <button id="checkoutButton" type="button">詢問結帳</button>
+      </div>
+    </aside>
+
+    <dialog class="product-dialog" id="productDialog">
+      <button class="icon-button dialog-close" id="closeDialog" type="button" aria-label="關閉商品細節">×</button>
+      <div id="dialogContent"></div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
