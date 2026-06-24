@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>轉轉找一找</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="game-card" aria-label="轉轉找一找遊戲">
+        <header class="top-panel">
+          <div>
+            <p class="eyebrow">親子共玩原型</p>
+            <h1>轉轉找一找</h1>
+          </div>
+          <div class="timer-card" aria-live="polite">
+            <span>剩餘時間</span>
+            <strong id="timeLeft">05:00</strong>
+          </div>
+        </header>
+
+        <section class="task-panel" aria-live="polite">
+          <div>
+            <span id="taskType">觀察任務</span>
+            <strong id="taskText">找一個會轉的東西</strong>
+          </div>
+          <button class="small-button" id="newTaskButton" type="button">換一題</button>
+        </section>
+
+        <section class="room-scene" aria-label="房間場景">
+          <button class="toy washer spinny" type="button" data-name="洗衣機" data-tags="spin round machine" aria-label="洗衣機">
+            <span class="washer-window"></span>
+            <span class="toy-label">洗衣機</span>
+          </button>
+          <button class="toy fan spinny" type="button" data-name="電風扇" data-tags="spin round fan" aria-label="電風扇">
+            <span class="fan-head"></span>
+            <span class="toy-label">電風扇</span>
+          </button>
+          <button class="toy wheel spinny" type="button" data-name="車輪" data-tags="spin round wheel" aria-label="車輪">
+            <span></span>
+            <span class="toy-label">車輪</span>
+          </button>
+          <button class="toy clock spinny" type="button" data-name="時鐘" data-tags="spin round clock" aria-label="時鐘">
+            <span class="clock-face"></span>
+            <span class="toy-label">時鐘</span>
+          </button>
+          <button class="toy ball" type="button" data-name="球" data-tags="round ball" aria-label="球">
+            <span></span>
+            <span class="toy-label">球</span>
+          </button>
+          <button class="toy book" type="button" data-name="書本" data-tags="book quiet" aria-label="書本">
+            <span></span>
+            <span class="toy-label">書本</span>
+          </button>
+          <button class="toy star no-tap" type="button" data-name="星星" data-tags="star stop" aria-label="星星">
+            <span></span>
+            <span class="toy-label">星星</span>
+          </button>
+        </section>
+
+        <p class="feedback" id="feedback">聽任務，慢慢找，不用急。</p>
+
+        <section class="control-panel" aria-label="音樂與家長設定">
+          <section>
+            <h2>音樂</h2>
+            <div class="control-row two">
+              <button class="text-action primary" id="musicButton" type="button">開始音樂</button>
+              <button class="text-action" id="calmButton" type="button">柔和模式</button>
+            </div>
+            <label class="slider-label">
+              <span>音量</span>
+              <input id="volumeRange" type="range" min="0" max="100" value="35" />
+            </label>
+          </section>
+
+          <section>
+            <h2>家長設定</h2>
+            <label class="slider-label">
+              <span>遊玩時間 <strong id="limitLabel">5 分鐘</strong></span>
+              <input id="limitRange" type="range" min="1" max="10" value="5" />
+            </label>
+            <button class="text-action full" id="restButton" type="button">進入休息</button>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <section class="rest-screen" id="restScreen" hidden aria-live="polite">
+      <div>
+        <p class="eyebrow">休息時間</p>
+        <h2>眼睛休息一下</h2>
+        <p>請跟大人一起拍拍手 5 下，看看遠方，再回來玩下一輪。</p>
+        <button id="resumeButton" type="button">再玩一輪</button>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>

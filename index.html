@@ -34,6 +34,9 @@
             <button type="button" data-lang="ja" role="option">日本語</button>
             <button type="button" data-lang="ko" role="option">한국어</button>
             <button type="button" data-lang="hk" role="option">香港繁中</button>
+            <button type="button" data-lang="fil" role="option">Filipino</button>
+            <button type="button" data-lang="id" role="option">Bahasa Indonesia</button>
+            <button type="button" data-lang="vi" role="option">Tiếng Việt</button>
           </div>
         </div>
 
@@ -171,7 +174,8 @@
             <div class="store-picker" id="storePicker">
               <a class="map-preview" id="storeMap" href="https://www.google.com/maps/search/7-11" target="_blank" rel="noopener noreferrer">
                 <span id="mapBrand">7-11</span>
-                <strong id="mapTitle">Google Map 門市搜尋</strong>
+                <strong id="mapTitle">Google Maps 自動搜尋門市</strong>
+                <small id="mapHint">點擊開啟 Google Maps，查看附近門市位置</small>
               </a>
               <div class="address-grid">
                 <label>
@@ -183,8 +187,8 @@
                   <select id="recipientDistrict" autocomplete="address-level2"></select>
                 </label>
                 <label>
-                  <span id="storeOptionLabel">門市選項</span>
-                  <select id="storeOption"></select>
+                  <span id="storeOptionLabel">選定門市</span>
+                  <input id="storeOption" type="text" placeholder="請輸入 Google Maps 上選到的門市名稱" />
                 </label>
               </div>
             </div>

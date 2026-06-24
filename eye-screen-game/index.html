@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>視力偵探 | 眼睛健康小遊戲</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" id="intro">
+        <div class="hero-copy">
+          <p class="eyebrow">3 分鐘互動篩檢</p>
+          <h1>視力偵探</h1>
+          <p class="lead">
+            用三個小任務觀察色覺、中央視野與低對比辨識狀況。這不是診斷工具，若結果異常或有症狀，請安排眼科檢查。
+          </p>
+          <button class="primary-action" id="startButton" type="button">開始測試</button>
+        </div>
+        <div class="eye-stage" aria-hidden="true">
+          <div class="iris">
+            <span></span>
+          </div>
+          <div class="scan-line"></div>
+        </div>
+      </section>
+
+      <section class="test-panel" id="game" hidden>
+        <header class="game-head">
+          <div>
+            <p class="eyebrow" id="stepLabel">任務 1 / 3</p>
+            <h2 id="testTitle">色覺密碼</h2>
+          </div>
+          <div class="score-chip">
+            <span>目前分數</span>
+            <strong id="scoreLabel">0</strong>
+          </div>
+        </header>
+
+        <div class="progress-track" aria-hidden="true">
+          <span id="progressBar"></span>
+        </div>
+
+        <div class="question-layout">
+          <div class="visual-zone" id="visualZone"></div>
+          <div class="answer-zone">
+            <p id="instructionText"></p>
+            <div class="choices" id="choices"></div>
+            <button class="secondary-action" id="nextButton" type="button" hidden>下一題</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="result-panel" id="results" hidden>
+        <p class="eyebrow">測試完成</p>
+        <h2 id="resultTitle">你的觀察結果</h2>
+        <div class="result-grid" id="resultGrid"></div>
+        <div class="notice">
+          <strong>提醒</strong>
+          <p>
+            這個小遊戲只適合做初步自我觀察，不能取代散瞳、眼底、視野、色覺或白內障相關檢查。
+            如果你看到線條扭曲、中央黑影、單眼視力突然變差、畏光加劇或日常辨色困難，請盡快看眼科。
+          </p>
+        </div>
+        <button class="primary-action" id="restartButton" type="button">再玩一次</button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -606,8 +606,8 @@ input[type="range"] {
 }
 
 .delivery-methods {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
   margin: 0;
   padding: 0;
@@ -615,17 +615,34 @@ input[type="range"] {
 }
 
 .delivery-methods legend {
-  width: 100%;
+  grid-column: 1 / -1;
 }
 
 .delivery-methods label {
+  position: relative;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   padding: 9px 10px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: white;
+  min-height: 42px;
+  text-align: center;
+  transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.delivery-methods label:has(input:checked) {
+  border-color: var(--blue);
+  background: var(--blue);
+  color: white;
+}
+
+.delivery-methods input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .map-preview {
@@ -651,6 +668,11 @@ input[type="range"] {
   color: white;
   padding: 5px 10px;
   font-size: 0.8rem;
+}
+
+.map-preview small {
+  color: var(--muted);
+  font-weight: 800;
 }
 
 .nextday-extra {

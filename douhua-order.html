@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>悠沐手作豆花 | 自取線上預訂</title>
+    <link rel="preconnect" href="https://upload.wikimedia.org" />
+    <link rel="stylesheet" href="douhua-order.css?v=customizer-sticky-1" />
+    <style>
+      .customizer {
+        scroll-margin-top: 96px;
+        overflow-anchor: none;
+      }
+
+      .menu-grid {
+        overflow-anchor: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="悠沐手作豆花首頁">
+        <span class="brand-mark">悠</span>
+        <span>
+          <strong>悠沐手作豆花</strong>
+          <small>線上預訂・現場取餐</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="主要導覽">
+        <a href="#menu">點餐</a>
+        <a href="#pickup">取餐資料</a>
+        <a href="#receipt">小票</a>
+      </nav>
+
+      <a class="cart-pill" href="#orderPanel" aria-label="查看訂單">
+        <span>訂單</span>
+        <strong id="cartCount">0</strong>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero-order" aria-labelledby="pageTitle">
+        <div class="hero-media">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Tofu_Pudding_2018-07-04.jpg/960px-Tofu_Pudding_2018-07-04.jpg"
+            alt="白色碗裡盛裝的豆花"
+          />
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">手作豆花預訂</p>
+          <h1 id="pageTitle">悠沐手作豆花</h1>
+          <p>先選商品與口味，到店快速取餐。</p>
+
+          <div class="store-status" aria-label="店舖狀態">
+            <div>
+              <span>營業時間</span>
+              <strong>10:30-18:30</strong>
+            </div>
+            <div>
+              <span>備餐時間</span>
+              <strong>約 15 分鐘</strong>
+            </div>
+            <div>
+              <span>自取地址</span>
+              <strong>北屯陳平路20號</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ordering-shell" id="menu">
+        <div class="menu-column">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">MENU</p>
+              <h2>選擇商品</h2>
+            </div>
+
+            <div class="filter-tabs" aria-label="菜單分類">
+              <a class="is-active" href="#menuGrid" data-filter="all">全部</a>
+              <a href="#menuGroup-featured" data-filter="featured">人氣</a>
+              <a href="#menuGroup-pudding" data-filter="pudding">豆花仙草</a>
+              <a href="#menuGroup-soy" data-filter="soy">豆漿</a>
+              <a href="#menuGroup-sweet" data-filter="sweet">甜湯</a>
+              <a href="#menuGroup-seasonal" data-filter="seasonal">冬季</a>
+            </div>
+          </div>
+
+          <p class="filter-summary" id="filterSummary">全部商品會依類別分區顯示。</p>
+          <section class="customizer" id="customizerPanel" aria-labelledby="customizerTitle" tabindex="-1">
+            <div class="customizer-head">
+              <div>
+                <p class="eyebrow">CUSTOM</p>
+                <h2 id="customizerTitle">口味設定</h2>
+              </div>
+              <div class="customizer-tools">
+                <button type="button" id="backToMenu">返回選商品</button>
+                <strong id="customizerPrice">NT$0</strong>
+              </div>
+            </div>
+
+            <div class="selected-dish">
+              <span class="dish-dot" id="selectedDishDot" aria-hidden="true"></span>
+              <div>
+                <strong id="selectedDishName">開心選三種料</strong>
+                <p id="selectedDishDesc">選好商品後，可調整基底、湯底、甜度與加購配料。</p>
+              </div>
+            </div>
+
+            <form id="customizeForm">
+              <fieldset id="baseFieldset">
+                <legend>基底</legend>
+                <label><input type="radio" name="base" value="豆花" checked />豆花</label>
+                <label><input type="radio" name="base" value="嫩仙草" />嫩仙草</label>
+              </fieldset>
+
+              <fieldset id="soupFieldset">
+                <legend>湯底</legend>
+                <label><input type="radio" name="soup" value="sweet" checked />甜湯</label>
+                <label><input type="radio" name="soup" value="soy" />豆漿</label>
+                <label><input type="radio" name="soup" value="soyMilk" />豆鮮奶</label>
+              </fieldset>
+
+              <fieldset>
+                <legend>甜度</legend>
+                <label><input type="radio" name="sweetness" value="正常" checked />正常</label>
+                <label><input type="radio" name="sweetness" value="減糖" />減糖</label>
+                <label><input type="radio" name="sweetness" value="無糖" />無糖</label>
+              </fieldset>
+
+              <fieldset id="toppingFieldset">
+                <legend>加購配料</legend>
+                <p class="field-hint">最多可選 3 種，加太多會影響杯碗容量。</p>
+                <div class="topping-grid" id="toppingGrid"></div>
+              </fieldset>
+
+              <div class="customizer-actions">
+                <div class="stepper" aria-label="份數">
+                  <button type="button" data-quantity-step="-1" aria-label="減少份數">-</button>
+                  <output id="customQty">1</output>
+                  <button type="button" data-quantity-step="1" aria-label="增加份數">+</button>
+                </div>
+                <button class="primary-button" type="submit">加入訂單</button>
+              </div>
+            </form>
+          </section>
+
+          <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
+        </div>
+
+        <aside class="order-panel" id="orderPanel" aria-labelledby="orderTitle">
+          <div class="order-head">
+            <div>
+              <p class="eyebrow">ORDER</p>
+              <h2 id="orderTitle">我的取餐籃</h2>
+            </div>
+            <strong id="cartTotal">NT$0</strong>
+          </div>
+
+          <div class="cart-lines" id="cartLines" aria-live="polite"></div>
+
+          <form class="pickup-form" id="pickup" novalidate>
+            <div class="form-row">
+              <label>
+                <span>姓名</span>
+                <input id="customerName" name="customerName" type="text" autocomplete="name" placeholder="王小明" />
+              </label>
+              <label>
+                <span>手機</span>
+                <input id="customerPhone" name="customerPhone" type="tel" autocomplete="tel" placeholder="0912-345-678" />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                <span>取餐日</span>
+                <input id="pickupDate" name="pickupDate" type="date" />
+              </label>
+              <label>
+                <span>取餐時間</span>
+                <select id="pickupTime" name="pickupTime"></select>
+              </label>
+            </div>
+
+            <label>
+              <span>備註</span>
+              <textarea id="orderNote" name="orderNote" rows="3" placeholder="例如：少冰、分開裝、需要餐具"></textarea>
+            </label>
+
+            <fieldset class="payment-options">
+              <legend>付款</legend>
+              <label><input type="radio" name="payment" value="現場付款" checked />現場付款</label>
+              <label><input type="radio" name="payment" value="LINE Pay 預留" />LINE Pay 預留</label>
+            </fieldset>
+
+            <button class="submit-button" id="submitOrder" type="submit">確認預訂</button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+        </aside>
+      </section>
+
+      <section class="receipt" id="receipt" aria-labelledby="receiptTitle" hidden>
+        <div>
+          <p class="eyebrow">PICKUP TICKET</p>
+          <h2 id="receiptTitle">取餐小票</h2>
+        </div>
+        <pre id="receiptText"></pre>
+        <div class="receipt-actions">
+          <button type="button" id="copyReceipt">複製訂單</button>
+          <button type="button" id="printReceipt">列印小票</button>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="douhua-order.js?v=customizer-sticky-1"></script>
+  </body>
+</html>

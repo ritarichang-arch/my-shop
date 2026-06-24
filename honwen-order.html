@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>宏文文具下單頁</title>
+    <link rel="stylesheet" href="honwen-order.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="宏文文具下單頁首頁">
+        <span class="brand-mark">HW</span>
+        <span>
+          <strong>宏文文具下單頁</strong>
+          <small>商品編號快速採購</small>
+        </span>
+      </a>
+      <nav class="top-nav" aria-label="頁面導覽">
+        <a href="#catalog">商品</a>
+        <a href="#order">訂單</a>
+        <a href="#customer">資料</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="summary-strip" aria-label="下單摘要">
+        <div>
+          <span>不重複編號</span>
+          <strong id="skuCount">0</strong>
+        </div>
+        <div>
+          <span>已選品項</span>
+          <strong id="lineCount">0</strong>
+        </div>
+        <div>
+          <span>總數量</span>
+          <strong id="unitCount">0</strong>
+        </div>
+        <div>
+          <span>參考小計</span>
+          <strong id="orderTotal">待確認</strong>
+        </div>
+      </section>
+
+      <section class="workbench">
+        <section class="catalog-panel" id="catalog" aria-label="商品清單">
+          <div class="panel-head">
+            <div>
+              <p>HW宏文公開通路資料</p>
+              <h1>商品編號下單</h1>
+            </div>
+            <button class="secondary-button" id="clearSearch" type="button">清除篩選</button>
+          </div>
+
+          <div class="filters" aria-label="商品篩選">
+            <label class="search-box">
+              <span>搜尋</span>
+              <input id="searchInput" type="search" placeholder="輸入商品編號、品名、分類" autocomplete="off" />
+            </label>
+            <label>
+              <span>分類</span>
+              <select id="categoryFilter"></select>
+            </label>
+            <label>
+              <span>排序</span>
+              <select id="sortFilter">
+                <option value="code">商品編號</option>
+                <option value="category">分類</option>
+                <option value="name">品名</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="catalog-meta">
+            <span id="resultCount">0 筆</span>
+            <span>資料來源：公開商品頁，實際庫存與售價請以供應商確認為準</span>
+          </div>
+
+          <div class="product-list" id="productList"></div>
+        </section>
+
+        <aside class="order-panel" id="order" aria-label="訂單內容">
+          <section class="cart-card">
+            <div class="panel-head compact">
+              <div>
+                <p>Order</p>
+                <h2>訂單明細</h2>
+              </div>
+              <button class="text-button" id="clearCart" type="button">清空</button>
+            </div>
+            <div class="cart-empty" id="cartEmpty">尚未加入商品</div>
+            <div class="cart-list" id="cartList"></div>
+          </section>
+
+          <section class="customer-card" id="customer">
+            <div class="panel-head compact">
+              <div>
+                <p>Customer</p>
+                <h2>客戶資料</h2>
+              </div>
+            </div>
+            <form class="customer-form" id="customerForm">
+              <label>
+                <span>公司 / 單位</span>
+                <input name="company" type="text" autocomplete="organization" />
+              </label>
+              <label>
+                <span>統一編號</span>
+                <input name="taxId" type="text" inputmode="numeric" />
+              </label>
+              <label>
+                <span>聯絡人</span>
+                <input name="contact" type="text" autocomplete="name" />
+              </label>
+              <label>
+                <span>電話</span>
+                <input name="phone" type="tel" autocomplete="tel" />
+              </label>
+              <label>
+                <span>希望交期</span>
+                <input name="needDate" type="date" />
+              </label>
+              <label>
+                <span>配送方式</span>
+                <select name="delivery">
+                  <option value="請供應商聯絡確認">請供應商聯絡確認</option>
+                  <option value="自取">自取</option>
+                  <option value="宅配">宅配</option>
+                  <option value="貨運">貨運</option>
+                </select>
+              </label>
+              <label class="full">
+                <span>收件地址</span>
+                <input name="address" type="text" autocomplete="street-address" />
+              </label>
+              <label class="full">
+                <span>訂單備註</span>
+                <textarea name="message" rows="3"></textarea>
+              </label>
+            </form>
+          </section>
+
+          <section class="export-card">
+            <div class="panel-head compact">
+              <div>
+                <p>Export</p>
+                <h2>送單內容</h2>
+              </div>
+            </div>
+            <textarea id="orderText" rows="11" readonly></textarea>
+            <div class="export-actions">
+              <button class="primary-button" id="copyOrder" type="button">複製訂單</button>
+              <button class="secondary-button" id="downloadCsv" type="button">下載 CSV</button>
+              <button class="secondary-button" id="printOrder" type="button">列印</button>
+            </div>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <template id="productTemplate">
+      <article class="product-row">
+        <div class="product-main">
+          <div class="code-badge"></div>
+          <div>
+            <h3></h3>
+            <p class="product-tags"></p>
+          </div>
+        </div>
+        <div class="product-ref"></div>
+        <div class="qty-control">
+          <button type="button" data-step="-1" aria-label="減少數量">-</button>
+          <input type="number" min="1" step="1" value="1" inputmode="numeric" />
+          <button type="button" data-step="1" aria-label="增加數量">+</button>
+        </div>
+        <button class="add-button" type="button">加入</button>
+      </article>
+    </template>
+
+    <template id="cartTemplate">
+      <article class="cart-item">
+        <div>
+          <strong></strong>
+          <span></span>
+        </div>
+        <div class="cart-controls">
+          <input type="number" min="1" step="1" inputmode="numeric" />
+          <button type="button" aria-label="移除">刪除</button>
+        </div>
+        <textarea rows="2" placeholder="此品項備註"></textarea>
+      </article>
+    </template>
+
+    <script src="honwen-order.js"></script>
+  </body>
+</html>
